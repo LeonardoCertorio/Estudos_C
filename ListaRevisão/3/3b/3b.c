@@ -3,8 +3,6 @@
 #include <locale.h>
 #define TAM 10
 
-//COM ERRO NA OPÇÃO DECRESCENTE
-
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
