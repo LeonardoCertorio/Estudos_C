@@ -36,6 +36,7 @@ int main() {
 		}
 	}
 	
+	//printando maior número
 	printf("\n\n");	
 	printf("O maior número é: %d", maiorNumero);
 			
