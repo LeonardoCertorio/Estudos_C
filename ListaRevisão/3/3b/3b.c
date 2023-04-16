@@ -8,7 +8,7 @@ int main() {
 	
 	int i, j, aux, num[TAM];
 	
-	printf("Digite %d números:\n", TAM);	
+	printf("Digite %d nÃºmeros:\n", TAM);	
 	for (i = 0; i < TAM; i++) {
   		scanf("%d", &num[i]);
   	}
@@ -35,7 +35,7 @@ int main() {
 	
 	int escolha;
 	
-	printf("Deseja exibir os números de forma:\n1 - Crescente\n2 - Decrescente\nEscolha:  ");
+	printf("Deseja exibir os nÃºmeros de forma:\n1 - Crescente\n2 - Decrescente\nEscolha:  ");
 	scanf("%d", &escolha);
 	
 	printf("\n\n");
