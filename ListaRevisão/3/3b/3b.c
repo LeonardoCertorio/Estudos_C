@@ -54,7 +54,7 @@ int main() {
 		
 	} else {
 		
-		printf("Erro!");
+		printf("Digite uma opção válida!");
 		
 	}
 		
