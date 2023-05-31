@@ -1,63 +1,46 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <locale.h>
-#define TAM 10
+#define TAM 7
+
+void FuncBubbleSort(int numero[], int tam) {
+	
+	int i, j, auxiliar;
+	
+	for (i = 0; i < TAM; i++) {
+		for (j = 0; j < TAM - i - 1; j++) {
+			if (numero[j] > numero[j+1] ) {
+				auxiliar = numero[j];
+				numero[j] = numero[j+1];
+				numero[j+1] = auxiliar;
+			}
+		}
+	}
+}
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
-	int i, j, aux, num[TAM];
+	int i, opcao, numero[TAM];
 	
-	printf("Digite %d números:\n", TAM);	
 	for (i = 0; i < TAM; i++) {
-  		scanf("%d", &num[i]);
+		printf("\nDigite o número %d: ", i+1);
+  		scanf("%d", &numero[i]);
   	}
+  	
+  	FuncBubbleSort(numero, TAM);
 		
-	for (i = 0; i < TAM; i++) {
-		
-		for (j = 0; j < TAM - i - 1; j++) {
-			
-			if (num[j] > num[j+1] ) {
-			
-				aux = num[j];
-				num[j] = num[j+1];				
-				num[j+1] = aux;
-				
-			} else {
-				
-				continue;
-				
-			}
-		}		
-	}
+	printf("\nDeseja exibir os números de forma:\n1 - Crescente\n2 - Decrescente\nEscolha:  ");
+	scanf("%d", &opcao);	
+	printf("\n");
 	
-	printf("\n\n");
-	
-	int escolha;
-	
-	printf("Deseja exibir os números de forma:\n1 - Crescente\n2 - Decrescente\nEscolha:  ");
-	scanf("%d", &escolha);
-	
-	printf("\n\n");
-	
-	if (escolha==1){
-		
-		for (i = 0; i < TAM; i++) {
-		printf("%d\n", num[i]);
-		}
-		
-	} else if (escolha==2) {
-		
-		for (i = TAM - 1; i >= 0; i--) {
-		printf("%d\n", num[i]);
-		}
-		
+	if (opcao==1){
+		for (i = 0; i < TAM; i++) 
+			printf("%d, ", numero[i]); 		
+	} else if (opcao==2) {		
+		for (i = TAM - 1; i >= 0; i--)
+			printf("%d, ", numero[i]);	
 	} else {
-		
-		printf("Digite uma opção válida!");
-		
-	}
-		
-	return 0;
-	
+		printf("Digite uma opção válida!");		
+	}		
+	return 0;	
 }
